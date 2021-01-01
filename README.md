@@ -23,7 +23,7 @@
 1. Deskargatu biltegi hau zure makinan
 2. Nabigatzailearen ezarpenetan, ezarri biltegiko `index.html` fitxategia hasiera orri bezela.
 
-#### Pestaña berri bezela:
+#### Fitxa berri bezela:
 
 1. Aurreko bi aukeretako bat aukeratuta, ezarri hasiera orria hurrengo *Add-on/Extension* erabilita: 
 
@@ -44,7 +44,7 @@ Esteka berriak gehitzeko, edota daudenak aldatzeko, `HTML` kodean etiketa hau bi
 </a>
 ```
 
-Esteka aldatzeko `href` propietateko balioa aldatu. `target="blank"` propietateak esteka pestaña berri batean irekitzea egiten du. 
+Esteka aldatzeko `href` propietateko balioa aldatu. `target="blank"` propietateak esteka fitxa berri batean irekitzea egiten du. 
 Hasiera orriak [Feather icons](https://feathericons.com/) erabiltzen du ikonoentzako. Ikono pertsonalizatua nahi baduzu, bilatu honen izena  [https://feathericons.com/](https://feathericons.com/) web gunean eta aldatu `data-feather=""` propietateko balioa.
 
 
