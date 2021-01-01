@@ -1,5 +1,5 @@
 <div align="center">
-    <h1><img src="icons/favicon.png" style="width:5%;height:5%;"> Bunny Start Page </h1>
+    <h1><img src="icons/favicon_small.png"> Bunny Start Page </h1>
     <b>Hasiera orri sinple eta funtzionala</b>
 </div>
 
