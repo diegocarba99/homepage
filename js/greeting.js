@@ -11,14 +11,21 @@ var gree2 = 'Egunon! ';
 var gree3 = 'Arratsaldeon ';
 var gree4 = 'Gabon ';
 
+var morning = 6;
+var midday = 14;
+var night = 21;
+
 
 // Define the hours of the greetings
-if (hour >= 23 && hour < 5) {
+if (hour >= 23 && hour < morning) {
     document.getElementById('greetings').innerText = gree1 + name;
-} else if (hour >= 6 && hour < 12) {
+
+} else if (hour >= morning && hour < midday) {
     document.getElementById('greetings').innerText = gree2 + name;
-} else if (hour >= 12 && hour < 20) {
+
+} else if (hour >= midday && hour < night) {
     document.getElementById('greetings').innerText = gree3 + name;
+
 } else  {
     document.getElementById('greetings').innerText = gree4 + name;
 }

@@ -1,62 +1,41 @@
 <div align="center">
-    <h1>Bento</h1>
-    <b>🍱 A Clean and Simple Startpage</b>
+    <h1>Bunny Start Page</h1>
+    <b>🐰 Hasiera orri sinple eta funtzionala</b>
 </div>
 
 <p align="center">
   <img src="https://github.com/MiguelRAvila/Bento/blob/master/assets/preview.png">
 </p>
 
-## Index
 
--   [Bento](#)
-    -   [Features](#features)
-    -   [Usage](#usage)
-        -   [Home Page](#as-home-page)
-        -   [New Tab](#as-new-tab)
-    -   [Customization](#customization)
-        -   [Links](#links)
-        -   [Colors](#colors)
-        -   [Theme Depending at the time](#theme-depending-at-the-time)
-        -   [Image Background](#image-background)
-        -   [Greetings](#greetings)
-        -   [Weather Info](#weather-info)
-        -   [Weather Icons](#weather-icons)
 
-### Features:
+## Erabilera:
 
--   **Dark/Light** mode, you can toggle them and It'll be saved in local store
--   **Clock and Date** format can be set to 24 hour (default) or 12 hour
--   **Greetings** are easy to change and modify
--   **Variables** for custom colors and font sizes in the `css` code
--   **Icons** all icons are from Feather Icons (Some others I made them with the Feather icons as a base)
--   **Modular** javascript files for an easy read
+#### Haiserako orri bezela Github Pages erabilita:
 
-## Usage:
+1. **Fork** egin biltegi honi.
+2. Gaitu *Github Pages* zerbitzua biltegiko ezarpenetan: `Settings > GitHub Pages > Source [master branch] > Save`.
+3. Nabigatzailearen ezarpenetan, ezarri sortu berri duzun `Github Pages Link` esteka hasiera orri bezela.
 
-#### As Home Page:
+### Hasiera orri bezela lokalean:
 
-1. Fork this repo
-2. Enable the Github Pages service `Settings > GitHub Pages > Source [master branch] > Save`
-3. Set it as Home Page:
-    - Click the menu button. and select Options. Preferences.
-    - Click the Home panel.
-    - Click the menu next to Homepage and new windows and choose to show custom URLs and add your `Github Pages link`
+1. Deskargatu biltegi hau zure makinan
+2. Nabigatzailearen ezarpenetan, ezarri biltegiko `index.html` fitxategia hasiera orri bezela.
 
-#### As New Tab:
+#### Pestaña berri bezela:
 
-1. You can use different Add-ons/Extensions for it
+1. Aurreko bi aukeretako bat aukeratuta, ezarri hasiera orria hurrengo *Add-on/Extension* erabilita: 
 
--   If you use Firefox: [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search)
--   If you use Chromium (Brave, Vivaldi, Chrome): [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
+-   Firefox erabiltzaileentzako: [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search)
+-   Chromium (Brave, Vivaldi, Chrome) erabiltzaileentzako: [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
 
-## Customization
+## Pertsonalizazioa
 
 > All the code is using variables and is comented, It's easy to customize the project to your own, and this sections are the principal customizable elements in the Startpage:
 
-### Links
+### Estekak
 
-You can change the links (and the icons too) in the HTML Code:
+Esteka berriak gehitzeko, edota daudenak aldatzeko, `HTML` kodean etiketa hau bilatu:
 
 ```html
 <a href="https://github.com/" target="blank" class="qlink__link qlink__link-1">
@@ -64,12 +43,14 @@ You can change the links (and the icons too) in the HTML Code:
 </a>
 ```
 
-Change the link in the `href` property with the link you want. (The `target="blank"` makes the link to open a new tab with the link you choose).
-The Project uses [Feather icons](https://feathericons.com/) for the icons, and you can change them in the `data-feather=""` property with the name of the icon.
+Esteka aldatzeko `href` propietateko balioa aldatu. `target="blank"` propietateak esteka pestaña berri batean irekitzea egiten du. 
+Hasiera orriak [Feather icons](https://feathericons.com/) erabiltzen du ikonoentzako. Ikono pertsonalizatua nahi baduzu, bilatu honen izena  [https://feathericons.com/](https://feathericons.com/) web gunean eta aldatu `data-feather=""` propietateko balioa.
 
-### Colors
+
+### Koloreak
 
 In the CSS code you can always change the variables for both themes (Dark and Light)
+`CSS` kodean erabilgarri dauden bi temen koloreak aldatu ditzazkezu. Bilatu hurrengo kodea `css/style.css` fitxategian eta **RGB** balioak aldatu.
 
 ```css
 /* Light theme  */
@@ -94,93 +75,42 @@ In the CSS code you can always change the variables for both themes (Dark and Li
 }
 ```
 
-### Theme Depending at the time
-
-In the `theme.js` file there's a section about changing the theme depending in the time. You have to 'Uncomment' that section to enable it:
-
-```js
-const today = new Date();
-const Hr = today.getHours();
-
-if (Hr >= 19 || Hr < 5) {
-    enableDark();
-} else {
-    disableDark();
-}
-```
-
-### Image Background
-
-You can set your own background image with the variable `--imgbg` and set the route to the image you want It's disable by default. If you uncomment the variable, it has by default this image:
-
-<p align="center">
-  <img src="https://github.com/MiguelRAvila/Bento/blob/master/assets/previewbg.png">
-</p>
-
-It has a black filter by default in `--imgcol`, and it'ts value is: `rgba(255, 255, 255, 0.7)` and `rgba(0, 0, 0, 0.7)` for the dark theme. You can change them and the opacity for a better experience with your image.
 
 ### Greetings
 
 You can put your name and change the greetings.
+Zure izena gehitu dezakezu eta agur pertsonalizatuak izan eguneko orduaren arabera. Aldatu hurrengo aldagaiak `js/greeting.js` fitxategian:
 
 ```js
-var name = 'John Doe';
-var lateTxt = 'Go to Sleep! ';
-var morningTxt = 'Good morning! ';
-var afterTxt = 'Good afternoon ';
-var evenTxt = 'Good evening ';
+var name = 'Diego';
+var gree1 = 'Jun lotara! ';
+var gree2 = 'Egunon! ';
+var gree3 = 'Arratsaldeon ';
+var gree4 = 'Gabon ';
 ```
 
-It'll change in order of the hour.
+Aldaketa orduak pertsonalizatzeko,  hurrengo aldagaiak aldatu:
+
+```js
+var morning = 6;
+var midday = 14;
+var night = 21;
+```
 
 ### Weather Info
 
-For setting up the Weather widget you're going to need an API Key in: `https://openweathermap.org/`. Once you have your Key you'll need to set yourlatitude and longitude, you can use: `https://www.latlong.net/` to get them. Once you have the data, you'll need to set them in the `weather.js` in the **js** folder. The code is
+Eguraldia erabilgarri izateko, API giltza bat behar duzu [https://openweathermap.org/](https://openweathermap.org/) webgunean. Zure kokapeneko latitude eta longitudeak behar dituzu. Kalkulatzeko erabili [https://www.latlong.net/](https://www.latlong.net/) webgunea. 
 
-> If you don't like to have your API Key public, you can make the repo into a private one. You can still use the Github Pages service.
-
-### Weather Icons
-
-<p align="center">
-  <img src="https://github.com/MiguelRAvila/Bento/blob/master/assets/previewico.png">
-</p>
-
-The icons by themselves have now 4 different color schemes:
-
--   **Nord** Using the Nord Color Scheme and easy-to-eyes colors
--   **OneDark** (Default one) Using the One Dark Pro color scheme
--   **Dark** For White theme only users that want a minimalist look
--   **White** For Dark theme only users that want a minimalist look
-
-You set the icon theme changing this two lines of code in the `index.html` and `weather.js` files:
-
--   If you want the Dark icon theme, change the `OneDark` to `Dark`
--   If you want the White icon theme, change the `OneDark` to `White`
--   If you want the Nord icon theme, change the `OneDark` to `Nord`
-
-For example if I'd like to use the `Dark` icon theme:
-
-```html
-<div class="weather-icon">
-    <img src="icons/OneDark/unknown.png" />
-</div>
-<!-- Change it to: -->
-<div class="weather-icon">
-    <img src="icons/Dark/unknown.png" />
-</div>
-```
+Ondoren, aldatu hurrengo aldagaiak `js/wheater.js` fitxategian lortu berri dituzun API giltzarekin eta latitude eta longitude balioekin:
 
 ```js
-function displayWeather() {
-    iconElement.innerHTML = `<img src="icons/OneDark/${weather.iconId}.png"/>`;
-    tempElement.innerHTML = `${weather.temperature.value}°<span class="darkfg">${tempUnit}</span>`;
-    descElement.innerHTML = weather.description;
-}
+const key = 'abcdefghijklmnopqrstuvwzyx123456';
 
-//Change it to:
-function displayWeather() {
-    iconElement.innerHTML = `<img src="icons/Dark/${weather.iconId}.png"/>`;
-    tempElement.innerHTML = `${weather.temperature.value}°<span class="darkfg">${tempUnit}</span>`;
-    descElement.innerHTML = weather.description;
+function setPosition(position) {
+    let latitude = 43.248200;
+    let longitude = -1.990520;
+    getWeather(latitude, longitude);
 }
 ```
+
+> Zure API giltza publikoki ez baduzu publikatu nahi Github Pages erabiltzen baduzu, biltegia pribatu bihurtu eta link berdina erabiltzeko gai izango zara.

@@ -7,6 +7,7 @@
   --fsm: 75px;  /* Date */
   --fss: 25px;  /* Greetings and Weather widger */
   --fses: 16px; /* Links List */
+  --imgcol: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); /* Filter color */
 
   /* Light theme  */
   --accent: #186efdaa; /* Hover color */
@@ -14,15 +15,6 @@
   --sbg: #e4e6e6;      /* Cards color */
   --fg: #3a3a3a;       /* Foreground color */
 
-  /* Image background  */
-
-  /* Uncoment this section to get the 
-    image wallpaper. You can also 
-    change the --imgcol value 
-    to make the filter to your own */
-
-  /* --imgbg: url(/img/wal.jpg); */
-  --imgcol: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); /* Filter color */
 }
 
 @media only screen and (max-width: 68.75em) {
