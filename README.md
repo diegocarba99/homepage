@@ -1,7 +1,8 @@
 <div align="center">
-    <h1>Bunny Start Page</h1>
-    <b>🐰 Hasiera orri sinple eta funtzionala</b>
+    <h1><img src="icons/favicon.png" style="width:5%;height:5%;"> Bunny Start Page </h1>
+    <b>Hasiera orri sinple eta funtzionala</b>
 </div>
+
 
 <p align="center">
   <img src="https://github.com/MiguelRAvila/Bento/blob/master/assets/preview.png">
