@@ -4,17 +4,17 @@
 :root {
   /* Fonts  */
   --fsg: 135px; /* Time and Greeting */
-  --fsm: 75px;  /* Date */
-  --fss: 25px;  /* Greetings and Weather widger */
+  --fsm:  75px;  /* Date */
+  --fss:  25px;  /* Greetings and Weather widger */
   --fses: 16px; /* Links List */
-  --imgcol: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); /* Filter color */
+  --imgcol: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); /* Filter color */
 
   /* Light theme  */
-  --accent: #186efd; /* Hover color */
-  --bg: #f5f5f5;       /* Background color */
-  --sbg: #e4e6e6;      /* Cards color */
-  --fg: #3a3a3a;       /* Foreground color */
-
+  --accent: #91C67C; /* Hover color */
+  --bg:     #121212; /* Background color */
+  --sbg:    #212121; /* Cards color */
+  --fg:     #d8dee9; /* Foreground color */
+  --bbg:    #444444; /* Search bar color */
 }
 
 @media only screen and (max-width: 68.75em) {
@@ -27,10 +27,11 @@
 
 /* Dark theme  */
 .darktheme {
-  --accent: #bc6ff1; /* Hover color */
-  --bg: #121212;       /* Background color */
-  --sbg: #212121;      /* Cards color */
-  --fg: #d8dee9;       /* Foreground color */
+  --accent: #9169ac; /* Hover color */
+  --bg:     #121212; /* Background color */
+  --sbg:    #212121; /* Cards color */
+  --bbg:    #444444; /* Search bar color */
+  --fg:     #d8dee9; /* Foreground color */
   --imgcol: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));    /* Filter color */
 }
 
@@ -69,8 +70,8 @@ body {
 }
 
 .bicon {
-  width: 26px;
-  height: 26px;
+  width: 46px;
+  height: 46px;
 }
 
 .container {
@@ -80,12 +81,12 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-gap: 30px;
-  padding: 20px;
+  padding: 0px;
 }
 @media only screen and (max-width: 68.75em) {
   .container {
-    grid-gap: 20px;
-    padding: 40px;
+    grid-gap: 0px;
+    padding: 0px;
   }
 }
 .container > * {
@@ -129,7 +130,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .sblock__weather {
   display: flex;
@@ -169,11 +170,14 @@ body {
 
 #greetings {
   font-size: var(--fss);
+  font-weight: bold;
   color: var(--fg);
 }
+
 @media only screen and (max-width: 68.75em) {
   #greetings {
     font-size: var(--fss);
+    font-weight: bold;
   }
 }
 
@@ -213,6 +217,12 @@ body {
     padding-right: 100px;
   }
 }
+.qlink__icon_big {
+  width: 50%;
+  height: 30%;
+  color: var(--fg);
+}
+
 .qlink__icon {
   width: 23px;
   height: 23px;
@@ -281,9 +291,9 @@ body {
 .qlist__head {
   margin-top: 30px;
   margin-bottom: 20px;
-  width: 30px;
+  width: 40px;
   color: var(--fg);
-  height: 30px;
+  height: 40px;
 }
 .qlist__link {
   text-decoration: none;
@@ -298,3 +308,58 @@ body {
   background-color: var(--accent);
   color: var(--fg);
 }
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.searchbox {  
+float: left;  
+}  
+  input[type=text] {  
+  width: 100%;
+  padding: 6px;  
+  font-size: 17px;  
+  border: none;
+  background-color: var(--bbg);
+  color: var(--fg);
+
+}  
+
+.searchbox button {    
+  padding: 8px;  
+  margin-top: 10px;  
+  margin-left: 10px;  
+  background: orange;  
+  font-size: 20px;  
+  border: none;  
+  cursor: pointer;  
+}  
+.searchbox button:hover {  
+  background: blue;  
+}  
